@@ -301,4 +301,4 @@ setTimeout(() => {
   loader.classList.add('hidden');
   app.classList.remove('hidden');
   console.log('Dashboard loaded!');
-}, 5000);
+}, 2000);

@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
   flex-direction: column;
   flex-wrap: wrap;
   height: 150px;
@@ -75,6 +76,7 @@ button:hover {
 #form {
   text-align: center;
   display: flex;
+  border-radius: 20px;
   flex-direction: column;
   justify-content: center;
   width: 90%;
