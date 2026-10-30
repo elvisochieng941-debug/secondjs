@@ -352,3 +352,15 @@ button:hover {
   position: fixed;
   top: 20px;
 }
+#image {
+  width: 300px;
+  border-radius: 50%;
+  /*object-fit: cover;*/
+  height: 300px;
+}
+#imageSet {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

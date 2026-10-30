@@ -294,14 +294,15 @@ document.addEventListener('keydown', function (event) {
     alert('Student data saved!');
   }
 });
-const loader = document.getElementById('loaderFirst');
+//const loader = document.getElementById('loaderFirst');
 const app = document.getElementById('app');
-
+const myImage = document.getElementById('loaderSecond');
 setTimeout(() => {
-  loader.classList.add('hidden');
+  // loader.classList.add('hidden');
+  myImage.classList.add('hidden');
   app.classList.remove('hidden');
   console.log('Dashboard loaded!');
-}, 5000);
+}, 2000);
 const themeButton = document.getElementById('themeButton');
 const body = document.querySelector('body');
 themeButton.addEventListener('click', function () {
