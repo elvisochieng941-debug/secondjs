@@ -318,4 +318,14 @@ button:hover {
     width: 90%; /* ✅ full width on phones */
     margin: 10px auto;
   }
+  #nav {
+    flex-direction: column; /* stack vertically */
+    align-items: center; /* center items */
+  }
+  .links {
+    width: 90%; /* full width buttons */
+    text-align: center;
+    min-height: 30px; /* bigger tap targets */
+    padding: 5px 10px;
+  }
 }
