@@ -294,3 +294,15 @@ button:hover {
   margin-bottom: 10px;
   margin-left: 10px;
 }
+@media (max-width: 600px) {
+  #form,
+  .card,
+  .skeleton,
+  .created-article {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .card {
+    grid-template-columns: 1fr; /* stack stats vertically */
+  }
+}
