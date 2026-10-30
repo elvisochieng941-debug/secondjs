@@ -1,88 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <title>Student Management Dashboard</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="scrypt.js" defer></script>
-</head>
-<body>
-<header id="header">
-<h1>Student Management Dashboard</h1>
-<nav id="nav">
-    <a class="links" href="#sectionOne">Welcome</a>
-    <a class="links" href="#sectionTwo">Add Student</a>
-    <a class="links" href="#sectionThree">Student List</a>
-    <a class="links" href="#sectionFour">Search</a>
-    <a class="links" href="#sectionFive">Statistics</a>
-    <a class="links" href="#sectionSix">About</a>
-</nav>
-    <button class="button" id="headerButton">Toggle something</button>
-</header>
-<main id="main">
-    <div class="skeleton">
+  </head>
+  <body>
+    <div id="loaderFirst">
+      <div class="skeleton">
         <div class="skeleton-div a-one"></div>
 
         <div class="skeleton-div b-one"></div>
         <div class="skeleton-div c-one"></div>
         <div class="skeleton-div d-one"></div>
-    </div>
-    <div class="skeleton">
-
+      </div>
+      <div class="skeleton">
         <div class="skeleton-div a-two"></div>
         <div class="skeleton-div b-two"></div>
         <div class="skeleton-div c-two"></div>
         <div class="skeleton-div d-two"></div>
         <aside class="skeleton-div aa-two"></aside>
-    </div>
-    <div class="skeleton">
+      </div>
+      <div class="skeleton">
         <div class="skeleton-div a-three"></div>
         <div class="skeleton-div b-three"></div>
         <div class="skeleton-div c-three"></div>
         <div class="skeleton-div d-three"></div>
+      </div>
     </div>
-
-
-<section id="sectionOne" class="section">
-    <h2 id="welcome">Welcome</h2>
-    <p>This is a student management dashboard</p>
-    <button id="welcomeButton" class="button">Welcome button</button>
-    <p>This application is for managing a student's dashboard</p>
-
-</section>
-    <section id="sectionTwo" class="section">
-        <h2 id="addStudent">Add Student</h2>
-        <form id="form">
+    <div id="app" class="hidden">
+      <header id="header">
+        <h1>Student Management Dashboard</h1>
+        <nav id="nav">
+          <a class="links" href="#sectionOne">Welcome</a>
+          <a class="links" href="#sectionTwo">Add Student</a>
+          <a class="links" href="#sectionThree">Student List</a>
+          <a class="links" href="#sectionFour">Search</a>
+          <a class="links" href="#sectionFive">Statistics</a>
+          <a class="links" href="#sectionSix">About</a>
+        </nav>
+        <button class="button" id="headerButton">Toggle something</button>
+      </header>
+      <main id="main">
+        <section id="sectionOne" class="section">
+          <h2 id="welcome">Welcome</h2>
+          <p>This is a student management dashboard</p>
+          <button id="welcomeButton" class="button">Welcome button</button>
+          <p>This application is for managing a student's dashboard</p>
+        </section>
+        <section id="sectionTwo" class="section">
+          <h2 id="addStudent">Add Student</h2>
+          <form id="form">
             <div class="input-div">
-            <input type="text" id="name" name="Name"  placeholder="">
-            <label for="name">Student Name</label>
+              <input type="text" id="name" name="Name" placeholder="" />
+              <label for="name">Student Name</label>
             </div>
             <div class="input-div">
-            <input type="email" id="email" name="Email" placeholder="">
-            <label for="email">Student Email</label>
+              <input type="email" id="email" name="Email" placeholder="" />
+              <label for="email">Student Email</label>
             </div>
             <div class="input-div">
-            <input type="number" id="age" name="Age" placeholder="">
-            <label for="age">Student Age</label>
+              <input type="number" id="age" name="Age" placeholder="" />
+              <label for="age">Student Age</label>
             </div>
             <div class="input-div">
-            <input type="text" id="course" name="Course" placeholder="">
-            <label for="course">Student course</label>
+              <input type="text" id="course" name="Course" placeholder="" />
+              <label for="course">Student course</label>
             </div>
             <div class="input-div">
-            <input type="number" id="marks" name="Marks" placeholder="">
-            <label for="marks">Student Marks</label>
+              <input type="number" id="marks" name="Marks" placeholder="" />
+              <label for="marks">Student Marks</label>
             </div>
-            <button type="submit" class="button" id="submitButton">Add to list</button>
+            <button type="submit" class="button" id="submitButton">
+              Add to list
+            </button>
             <p id="form-display"></p>
-        </form>
-    </section>
-    <section id="sectionThree" class="section">
-        <h2>Student List</h2>
-        <div id="sectionthreeDiv"></div>
+          </form>
+        </section>
+        <section id="sectionThree" class="section">
+          <h2>Student List</h2>
+          <div id="sectionthreeDiv"></div>
 
-       <!-- <article class="article first-article">
+          <!-- <article class="article first-article">
             <h4>Name:Jake Paul</h4>
             <p>Age: 27</p>
           <p>  Course:Business Information Technology</p>
@@ -104,42 +105,47 @@
             <button class="button" id="articletwoB"> Toggle Status</button>
             <button class="button" id="articletwoC" >View Details</button>
         </article>-->
-    </section>
-    <section id="sectionFour" class="section">
-        <h2>Search</h2>
-        <div class="input-div">
-        <input type="search" id="search" name="Search" placeholder="">
-        <label for="search">Search Student</label>
-        </div>
-        <div id="searchDisplay"></div>
-        <div id="notfound-display"></div>
-    </section>
-    <section id="sectionFive" class="section">
-        <h2>Statistics</h2>
-        <div class="card">
+        </section>
+        <section id="sectionFour" class="section">
+          <h2>Search</h2>
+          <div class="input-div">
+            <input type="search" id="search" name="Search" placeholder="" />
+            <label for="search">Search Student</label>
+          </div>
+          <div id="searchDisplay"></div>
+          <div id="notfound-display"></div>
+        </section>
+        <section id="sectionFive" class="section">
+          <h2>Statistics</h2>
+          <div class="card">
             <div class="card-h">
-            <h4>Students</h4>
-            <p id="cardoneStudents"></p>
-            <h4>Average Mark</h4>
-            <p id="cardoneAverage"></p>
-           <h4>Highest Mark</h4>
-            <p id="cardoneHighest"></p>
-            <h4>Active students</h4>
-            <p id="cardoneActive"></p>
+              <h4>Students</h4>
+              <p id="cardoneStudents"></p>
+              <h4>Average Mark</h4>
+              <p id="cardoneAverage"></p>
+              <h4>Highest Mark</h4>
+              <p id="cardoneHighest"></p>
+              <h4>Active students</h4>
+              <p id="cardoneActive"></p>
             </div>
-        </div>
-    </section>
-    <section id="sectionSix" class="section">
-        <h2>About</h2>
-        <article class="article third-article">
-            <p>My application helps students manage their dashboard</p>
-            <button class="button" id="articlethreeA">Show details/Hide details</button>
-        </article>
-    </section>
-</main>
-<footer id="footer">
-    <p>&copy; Elvis Ouma</p>
-    <p>2026 || All Rights Reserved</p>
-</footer>
-</body>
+          </div>
+        </section>
+        <section id="sectionSix" class="section">
+          <h2>About</h2>
+          <article class="article third-article">
+            <p class="details-paragraph">
+              My application helps students manage their dashboard. This
+              dashboard allows users to add, search, update and manage student
+              records.
+            </p>
+            <button class="button" id="articlethreeA">Hide details</button>
+          </article>
+        </section>
+      </main>
+      <footer id="footer">
+        <p>&copy; Elvis Ouma</p>
+        <p>2026 || All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
 </html>

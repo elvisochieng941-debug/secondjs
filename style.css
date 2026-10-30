@@ -1,309 +1,302 @@
-*
-{
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-#header
-{
-   /* position: sticky;*/
-    position: relative;
-    top: 5px;
-    background: radial-gradient(circle at top,grey,brown,white);
-    box-shadow: 0 6px 19px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 150px;
-    gap: 10px;
-    overflow: hidden;
+#header {
+  /* position: sticky;*/
+  position: relative;
+  top: 5px;
+  background: radial-gradient(circle at top, grey, brown, white);
+  box-shadow: 0 6px 19px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 150px;
+  gap: 10px;
+  overflow: hidden;
 }
-#header::before
-{
-    content: "";
-    position: absolute;
-    background-color: deepskyblue;
-    width: 200px;
-    height: 100px;
-    border-radius: 20px;
-    filter:blur(50px);
-    animation: glowAround 2s linear infinite;
-
+#header::before {
+  content: '';
+  position: absolute;
+  background-color: deepskyblue;
+  width: 200px;
+  height: 100px;
+  border-radius: 20px;
+  filter: blur(50px);
+  animation: glowAround 2s linear infinite;
 }
 @keyframes glowAround {
-    0%
-    {
-        top:-50px;
-        left:-50px;
-    }
-    25%
-    {
-        top:-50px;
-        left: calc(100% - 50px);
-    }
-    50%
-    {
-        top:calc(100% - 50px);
-        left: calc(100% - 50px);
-    }
-    75%
-    {
-        top: calc(100% - 50px);
-        left: -50px;
-    }
-    100%
-    {
-        top: -50px;
-        left: -50px;
-    }
+  0% {
+    top: -50px;
+    left: -50px;
+  }
+  25% {
+    top: -50px;
+    left: calc(100% - 50px);
+  }
+  50% {
+    top: calc(100% - 50px);
+    left: calc(100% - 50px);
+  }
+  75% {
+    top: calc(100% - 50px);
+    left: -50px;
+  }
+  100% {
+    top: -50px;
+    left: -50px;
+  }
 }
-#nav
-{
-margin-bottom: 10px;
-    display: flex;
-    gap:10px;
+#nav {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+.links {
+  background-color: beige;
+  height: 20px;
+  border-radius: 3px;
+}
+#headerButton {
+  margin-bottom: 1px;
+}
+.button {
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+}
+button:hover {
+  transition: all 0.6s;
+  transform: scale(1.1);
+}
+#form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  align-items: center;
+  margin-left: 10%;
+  background: linear-gradient(
+    130deg,
+    transparent,
+    grey,
+    white,
+    brown,
+    navy,
+    whitesmoke,
+    transparent
+  );
+}
+#name,
+#email,
+#age,
+#course,
+#marks,
+#search {
+  border-radius: 10px;
+}
+.input-div {
+  position: relative;
+}
+.input-div input {
+  width: 300px;
+  height: 35px;
+  margin-bottom: 25px;
+  background-color: white;
+}
+.input-div label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  transition: 0.5s;
+  font-size: 15px;
+}
+.input-div input:focus + label,
+.input-div input:not(:placeholder-shown) + label {
+  top: -10px;
+  transform: none;
+  background-color: white;
+  font-size: 12px;
+}
+#footer {
+  text-align: center;
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: grey;
+  /*background: radial-gradient(circle at top left,transparent,#111,grey,#111,transparent);*/
+  text-align: center;
+  color: white;
+  width: 450px;
+  height: 350px;
+  border-radius: 20px;
+  margin-left: 90px;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  background: conic-gradient(
+    transparent,
+    red,
+    blue,
+    deepskyblue,
+    greenyellow,
+    transparent
+  );
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  animation: glow 3s linear infinite;
+}
+@keyframes glow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card::after {
+  content: '';
+  background-color: grey;
+  /* background: radial-gradient(circle at top left,transparent,#111,grey,#111,transparent);*/
+  inset: 3px;
+  border-radius: 20px;
+  position: absolute;
+}
+.card-h {
+  z-index: 1;
+  position: relative;
+}
 
-}
-.links
-{
-    background-color: beige;
-    height: 20px;
-    border-radius: 3px;
-}
-#headerButton
-{
-    margin-bottom: 1px;
-}
-.button
-{
-border-radius: 10px;
-    background-color: grey;
-    color: white;
-}
-button:hover
-{
-    transition: all 0.6s;
-    transform: scale(1.1);
-}
-#form
-{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 500px;
-    height: 400px;
-    align-items: center;
-    margin-left: 10%;
-    background: linear-gradient(130deg,transparent,grey,white,brown,navy,whitesmoke,transparent);
-}
-#name,#email,#age,#course,#marks,#search
-{
-border-radius: 10px;
-
-}
-.input-div
-{
-    position: relative;
-}
-.input-div input
-{
-    width: 300px;
-    height: 35px;
-    margin-bottom: 25px;
-    background-color: white;
-}
-.input-div label
-{
-position: absolute;
-    top:12px;
-    left: 12px;
-    transition: 0.5s;
-    font-size:15px;
-}
-.input-div input:focus + label, .input-div input:not(:placeholder-shown) + label
-{
-    top: -10px;
-    transform: none;
-    background-color: white;
-    font-size: 12px;
-}
-#footer
-{
-    text-align: center;
-}
-.card
-{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    background-color: grey;
-    /*background: radial-gradient(circle at top left,transparent,#111,grey,#111,transparent);*/
-    text-align: center;
-    color: white;
-    width: 450px;
-    height:350px;
-    border-radius:20px;
-    margin-left: 90px;
-    position:relative ;
-    overflow: hidden;
-}
-.card::before
-{
-    content: "";
-    background: conic-gradient(transparent,red,blue,deepskyblue,greenyellow,transparent);
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    top:-25%;
-    left: -25%;
-    animation: glow 3s linear infinite;
-}@keyframes glow {
-    from
-    {
-
-        transform: rotate(0deg);
-    }
-    to
-    {
-
-        transform: rotate(360deg);
-    }
- }
- .card::after
- {
-     content: "";
-     background-color: grey;
-    /* background: radial-gradient(circle at top left,transparent,#111,grey,#111,transparent);*/
-     inset: 3px;
-     border-radius: 20px;
-     position: absolute;
- }
- .card-h
- {
-     z-index: 1;
-     position: relative;
-
- }
 /*Skeleton loaders*/
-.skeleton
-{
-width: 450px;
-height: 300px;
-    box-shadow:0 6px 18px black;
-margin: 20px;
-    display: flex;
-    flex-direction: column;
-border-radius: 20px;
+.skeleton {
+  width: 450px;
+  height: 300px;
+  box-shadow: 0 6px 18px black;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
 }
-.skeleton-div
-{
-    background:linear-gradient(170deg,transparent,white,grey,transparent);;
-box-shadow: 0 5px 18px black;
-    /*width: 250px;
+.skeleton-div {
+  background: linear-gradient(170deg, transparent, white, grey, transparent);
+  box-shadow: 0 5px 18px black;
+  /*width: 250px;
     height: 200px;
     margin-left: 20px;
 */
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-.skeleton-div::after
-{
-    position: absolute;
-    background: linear-gradient(170deg,transparent,white,grey,transparent);
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    content: "";
-    animation: move 2s linear infinite;
-
+.skeleton-div::after {
+  position: absolute;
+  background: linear-gradient(170deg, transparent, white, grey, transparent);
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  content: '';
+  animation: move 2s linear infinite;
 }
 @keyframes move {
-  100%
-  {
-      left: 100%;
+  100% {
+    left: 100%;
+  }
 }
+.a-one,
+.a-two,
+.a-three {
+  margin-left: 60px;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
-.a-one,.a-two,.a-three
-{
-    margin-left: 60px;
-    width: 300px;
-    height: 100px;
-    border-radius: 10px;
-margin-top: 20px;
-}
-.b-one,.b-two,.b-three
-{
-    margin-left: 60px;
-    width: 250px;
-    height: 20px;
-    border-radius: 10px;
+.b-one,
+.b-two,
+.b-three {
+  margin-left: 60px;
+  width: 250px;
+  height: 20px;
+  border-radius: 10px;
 
-    margin-top: 20px;
+  margin-top: 20px;
 }
-.c-one,.c-two,.c-three
-{
-    margin-left: 60px;
-    width: 200px;
-    height: 20px;
-    border-radius: 10px;
+.c-one,
+.c-two,
+.c-three {
+  margin-left: 60px;
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
 
-    margin-top: 20px;
+  margin-top: 20px;
 }
-.aa-two
-{
+.aa-two {
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
 
-    width: 50px;
-    height: 60px;
-    border-radius: 50%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.d-one,
+.d-two,
+.d-three {
+  margin-left: 60px;
+  width: 280px;
+  height: 20px;
+  border-radius: 10px;
 
-    margin-top: 20px;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    margin-bottom:20px;
+  margin-top: 20px;
 }
-.d-one,.d-two,.d-three
-{
-    margin-left: 60px;
-    width: 280px;
-    height: 20px;
-    border-radius: 10px;
+.hidden {
+  display: none;
+}
 
-    margin-top: 20px;
+#form-display {
+  color: black;
+  background-color: white;
 }
-.hidden
-{
-    display:none;
+#sectionThree {
+  background: grey;
+  border-radius: 20px;
 }
-#form-display
-{
-    color: black;
-    background-color: white;
+#sectionThree h2 {
+  margin-left: 20px;
 }
-#sectionThree
-{
-    background: grey;
-    border-radius: 20px;
-
+.created-article {
+  background-color: deepskyblue;
+  width: 400px;
+  margin-left: 20%;
+  text-align: center;
+  border-radius: 20px;
+  color: #111;
 }
-#sectionThree h2
-{
-    margin-left: 20px;
+.created-article button {
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
-.created-article
-{
-    background-color: deepskyblue;
-    width: 400px;
-    margin-left: 20%;
-    text-align: center;
-    border-radius: 20px;
+#loaderFirst {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+@media (max-width: 600px) {
+  #nav:hover {
+    background-color: aqua;
     color: #111;
-}
-.created-article button
-{
-    margin-bottom: 10px;
-    margin-left: 10px;
-
+  }
 }
