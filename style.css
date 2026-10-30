@@ -219,8 +219,9 @@ button:hover {
 .a-one,
 .a-two,
 .a-three {
-  margin-left: 60px;
-  width: 300px;
+  margin: 10px auto;
+  max-width: 300px;
+  width: 80%;
   height: 100px;
   border-radius: 10px;
   margin-top: 20px;
@@ -228,9 +229,10 @@ button:hover {
 .b-one,
 .b-two,
 .b-three {
-  margin-left: 60px;
-  width: 250px;
+  margin-left: 10px auto;
+  max-width: 250px;
   height: 20px;
+  width: 70%;
   border-radius: 10px;
 
   margin-top: 20px;
@@ -238,8 +240,9 @@ button:hover {
 .c-one,
 .c-two,
 .c-three {
-  margin-left: 60px;
-  width: 200px;
+  margin-left: 10px auto;
+  max-width: 200px;
+  width: 60%;
   height: 20px;
   border-radius: 10px;
 
@@ -250,17 +253,17 @@ button:hover {
   height: 60px;
   border-radius: 50%;
 
-  margin-top: 20px;
+  margin: 20px auto;
   display: flex;
-  justify-content: end;
-  align-items: end;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .d-one,
 .d-two,
 .d-three {
-  margin-left: 60px;
-  width: 280px;
+  margin-left: 10px auto;
+  max-width: 280px;
+  width: 75%;
   height: 20px;
   border-radius: 10px;
 
@@ -304,5 +307,20 @@ button:hover {
   }
   .card {
     grid-template-columns: 1fr; /* stack stats vertically */
+  }
+  .a-one,
+  .a-two,
+  .a-three,
+  .b-one,
+  .b-two,
+  .b-three,
+  .c-one,
+  .c-two,
+  .c-three,
+  .d-one,
+  .d-two,
+  .d-three {
+    width: 90%; /* ✅ full width on phones */
+    margin: 10px auto;
   }
 }
