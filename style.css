@@ -15,8 +15,10 @@
   border-radius: 10px;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 150px;
+  min-height: 150px;
+  height: auto;
   gap: 10px;
+  /*padding: 15px 10px;*/
   overflow: hidden;
 }
 #header::before {
@@ -52,14 +54,20 @@
   }
 }
 #nav {
-  margin-bottom: 10px;
   display: flex;
+  flex-direction: row;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .links {
   background-color: beige;
-  height: 20px;
+  padding: 8px 12px;
+  text-align: center;
+  min-height: 30px;
   border-radius: 3px;
+  font-size: 16px; /* larger text for phones */
+  min-width: 120px; /* ensures each link has space */
 }
 #headerButton {
   margin-bottom: 1px;
@@ -132,7 +140,7 @@ button:hover {
 }
 .card {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   background-color: grey;
   /*background: radial-gradient(circle at top left,transparent,#111,grey,#111,transparent);*/
   text-align: center;
@@ -318,14 +326,21 @@ button:hover {
     width: 90%; /* ✅ full width on phones */
     margin: 10px auto;
   }
-  #nav {
-    flex-direction: column; /* stack vertically */
-    align-items: center; /* center items */
+  #header {
+    height: auto; /* Allow header to expand on mobile */
+    padding: 15px 5px;
   }
+
+  #nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
   .links {
-    width: 90%; /* full width buttons */
-    text-align: center;
-    min-height: 30px; /* bigger tap targets */
-    padding: 5px 10px;
+    min-width: unset; /* Remove large min-width on small screens */
+    flex: 1 1 auto; /* Allow items to resize dynamically */
+    font-size: 14px; /* Slightly smaller font to prevent excess wrapping */
+    padding: 6px 8px;
   }
 }
