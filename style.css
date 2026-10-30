@@ -77,10 +77,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 500px;
-  height: 400px;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
   align-items: center;
-  margin-left: 10%;
+  margin: auto;
   background: linear-gradient(
     130deg,
     transparent,
@@ -104,7 +105,8 @@ button:hover {
   position: relative;
 }
 .input-div input {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 35px;
   margin-bottom: 25px;
   background-color: white;
@@ -133,10 +135,11 @@ button:hover {
   /*background: radial-gradient(circle at top left,transparent,#111,grey,#111,transparent);*/
   text-align: center;
   color: white;
-  width: 450px;
-  height: 350px;
+  width: 90%;
+  max-width: 450px;
+  height: auto;
   border-radius: 20px;
-  margin-left: 90px;
+  margin: 20px auto;
   position: relative;
   overflow: hidden;
 }
@@ -180,10 +183,11 @@ button:hover {
 
 /*Skeleton loaders*/
 .skeleton {
-  width: 450px;
-  height: 300px;
+  width: 90%;
+  max-width: 450px;
+  height: auto;
   box-shadow: 0 6px 18px black;
-  margin: 20px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -279,8 +283,9 @@ button:hover {
 }
 .created-article {
   background-color: deepskyblue;
-  width: 400px;
-  margin-left: 20%;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
   text-align: center;
   border-radius: 20px;
   color: #111;
@@ -288,19 +293,4 @@ button:hover {
 .created-article button {
   margin-bottom: 10px;
   margin-left: 10px;
-}
-@media (max-width: 600px) {
-  #form {
-    width: 100%;
-    height: auto;
-  }
-  .card {
-    grid-template-columns: 1fr; /* stack stats vertically */
-    height: auto;
-  }
-  .created-article {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
