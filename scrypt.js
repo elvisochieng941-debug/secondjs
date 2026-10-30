@@ -302,3 +302,13 @@ setTimeout(() => {
   app.classList.remove('hidden');
   console.log('Dashboard loaded!');
 }, 5000);
+const themeButton = document.getElementById('themeButton');
+const body = document.querySelector('body');
+themeButton.addEventListener('click', function () {
+  body.classList.toggle('theme');
+  if (body.classList.contains('theme')) {
+    themeButton.textContent = 'Light Mode';
+  } else {
+    themeButton.textContent = 'Dark Mode';
+  }
+});

@@ -344,3 +344,11 @@ button:hover {
     padding: 6px 8px;
   }
 }
+.theme {
+  background-color: rgb(88, 83, 77);
+  transition: all 1s;
+}
+#themeButton {
+  position: fixed;
+  top: 20px;
+}
